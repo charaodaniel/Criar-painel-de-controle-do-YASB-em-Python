@@ -1,4 +1,357 @@
+Excelente! Vamos fazer exatamente o que pediu: **tradução para inglês** do seu README, mas mantendo também a parte em português (PT-BR) em seções distintas, tudo num arquivo **Markdown (README.md)** bem organizado.
+
+Segue o arquivo pronto para usar — **bilingue** — com as duas versões separadas. Pode copiar e colar direto no seu projeto!
+
+---
+
+````markdown
+# 🎛️ YASB Control Panel - Python Version
+
+_A modern and intuitive graphical interface to configure YASB (Yet Another Status Bar) on Windows, developed in Python with tkinter/ttk._
+
+---
+
+## 📋 About the Project
+
+This control panel allows you to visually configure YASB without manually editing YAML and CSS files. With a native and modern desktop interface, you can manage widgets, customize styles, and adjust advanced settings in a simple and efficient way.
+
+---
+
+## ✨ Features
+
+### 🧩 Widget Management
+- **Tree view** of all configured widgets
+- **Enable/disable** widgets with a single click
+- **Edit properties** like position (left, center, right)
+- **Configure specific parameters** for each widget
+- **Add new widgets** with custom settings
+- **Duplicate existing widgets**
+- **Remove unnecessary widgets**
+
+### 🎨 Style Editor
+- **Integrated color picker** for visual customization
+- **Predefined themes** (Dark, Light, Blue, Green)
+- **Font configuration** (family, size, weight)
+- **Spacing adjustments** (padding, margin)
+- **Border settings** (width, radius, color)
+- **Advanced style editor** with multiple categories
+- **Save and load** custom themes
+
+### ⚙️ Advanced Settings
+- **System settings** (auto-start, debug mode)
+- **Display settings** (monitor, position, dimensions)
+- **Integrated YAML editor** for manual configurations
+- **Real-time YAML syntax validation**
+- **Automatic YAML formatting**
+
+### 👁️ Preview and Testing
+- **Visual preview** of the status bar
+- **Detailed configuration information**
+- **Test configuration** with validation
+- **Take screenshots** of the preview
+- **Automatically reload YASB**
+
+---
+
+## 🚀 Technologies Used
+
+- **Python 3.11+** - Programming language
+- **tkinter/ttk** - Native graphical interface
+- **PyYAML** - YAML file handling
+- **JSON** - Saving custom themes
+
+---
+
+## 🛠️ Installation and Configuration
+
+### Prerequisites
+- Python 3.11 or higher
+- YASB installed and configured on Windows
+- Python libraries: `pyyaml`, `tkinter` (usually included with Python)
+
+### Installation
+
+1. **Download the control panel files**
+   ```bash
+   # Clone or download files into a local folder
+   mkdir yasb_control_panel
+   cd yasb_control_panel
+````
+
+2. **Install dependencies**
+
+   ```bash
+   pip install pyyaml
+   ```
+
+3. **Check if tkinter is available**
+
+   ```bash
+   python -c "import tkinter; print('tkinter available')"
+   ```
+
+---
+
+### Initial Configuration
+
+1. **Run the control panel**
+
+   ```bash
+   python main_enhanced.py
+   ```
+
+2. **Set the YASB path**
+
+   * Click "📂 Set YASB Path"
+   * Select the directory where YASB is installed
+   * Example: `C:\Program Files\yasb` or `C:\Users\YourUser\yasb`
+
+3. **Load your existing configuration**
+
+   * Click "📁 Open Config"
+   * Select your YASB `config.yaml` file
+   * Or let the panel auto-load it from the default directory
+
+---
+
+## 📖 How to Use
+
+### Widget Management
+
+1. **View Widgets**
+
+   * Go to the "🧩 Widgets" tab
+   * See all widgets listed in the tree on the left
+   * Click on a widget to see its properties
+
+2. **Add New Widget**
+
+   * Click "➕ Add"
+   * Choose widget type
+   * Configure options
+   * Set position on the bar (left, center, right)
+
+3. **Edit Existing Widget**
+
+   * Select the widget in the tree
+   * Click "✏️ Edit"
+   * Modify settings as needed
+
+4. **Enable/Disable Widget**
+
+   * Select the widget
+   * Click "🔄 Enable/Disable"
+
+---
+
+### Style Customization
+
+1. **Apply Predefined Theme**
+
+   * Go to the "🎨 Styles" tab
+   * Choose a theme (Dark, Light, Blue, Green)
+   * Theme is applied automatically
+
+2. **Customize Colors**
+
+   * Click the "🎨" buttons next to each color
+   * Use the color picker
+   * Or enter the hex code manually
+
+3. **Configure Font and Layout**
+
+   * Adjust font family, size, and weight
+   * Configure padding and margin
+   * Click "✅ Apply Styles"
+
+4. **Advanced Editor**
+
+   * Click "🎨 Advanced Editor"
+   * Configure colors, typography, layout, and effects
+   * Save advanced settings
+
+---
+
+### Advanced Settings
+
+1. **System Settings**
+
+   * Go to the "⚙️ Advanced" tab
+   * Configure auto-start and debug mode
+   * Adjust display settings
+
+2. **YAML Editor**
+
+   * Edit configuration directly in YAML
+   * Use "✅ Validate YAML" to check syntax
+   * Use "🔧 Format" to organize code
+
+---
+
+### Preview and Testing
+
+1. **Visual Preview**
+
+   * Go to the "👁️ Preview" tab
+   * Click "🔄 Refresh Preview"
+   * See how the bar will look
+
+2. **Test Configuration**
+
+   * Click "🚀 Test Configuration"
+   * Check for issues in your config
+
+3. **Apply to YASB**
+
+   * Save the configuration with "💾 Save Config"
+   * Click "🔄 Reload YASB" to apply
+
+---
+
+## 📁 File Structure
+
+```
+yasb_control_panel/
+├── main_enhanced.py          # Main application
+├── widget_dialogs.py         # Dialogs for widget editing
+├── config_example.yaml       # Sample configuration
+├── test_config.py            # Test scripts
+├── README.md                 # This file
+└── themes/                   # Custom themes (created automatically)
+```
+
+---
+
+## 🔧 Supported Widget Types
+
+* **ClockWidget** - Clock with date and time
+* **CpuWidget** - CPU monitor
+* **MemoryWidget** - RAM monitor
+* **BatteryWidget** - Battery status
+* **VolumeWidget** - Volume control
+* **NetworkWidget** - Network status
+* **ActiveWindowWidget** - Active window
+* **WeatherWidget** - Weather information
+* **DiskWidget** - Disk usage
+* **CustomWidget** - Custom widget
+
+---
+
+## 🎨 Predefined Themes
+
+### Dark Theme (Default)
+
+* Background: `#1e1e1e`
+* Text: `#ffffff`
+* Accent: `#007acc`
+* Border: `#333333`
+
+### Light Theme
+
+* Background: `#ffffff`
+* Text: `#000000`
+* Accent: `#0078d4`
+* Border: `#cccccc`
+
+### Blue Theme
+
+* Background: `#0f1419`
+* Text: `#e6e6e6`
+* Accent: `#00d4ff`
+* Border: `#1e3a5f`
+
+### Green Theme
+
+* Background: `#0d1117`
+* Text: `#c9d1d9`
+* Accent: `#00ff88`
+* Border: `#21262d`
+
+---
+
+## 🐛 Troubleshooting
+
+### Error: "YASB not found"
+
+* Check if YASB is installed
+* Use "📂 Set YASB Path" to manually set the path
+* Ensure the directory contains YASB files
+
+### Error: "Error loading configuration"
+
+* Check if YAML file is valid
+* Use the integrated YAML validator
+* Ensure the file isn't in use by another program
+
+### Error: "Failed to reload YASB"
+
+* Make sure YASB isn’t running
+* Run the panel as administrator if needed
+* Check if the YASB path is correct
+
+### Interface not responding
+
+* Close and reopen the app
+* Check for errors in the console
+* Ensure Python and tkinter are working properly
+
+---
+
+## 📝 Usage Tips
+
+1. **Backup your Config**
+
+   * Always back up your `config.yaml` before making changes
+   * Use "💾 Save Config" regularly
+
+2. **Test Before Applying**
+
+   * Use the preview to see how it will look
+   * Test your config before reloading YASB
+
+3. **Organize Widgets**
+
+   * Keep related widgets in the same position
+   * Use descriptive names for custom widgets
+
+4. **Customize Styles**
+
+   * Start with a predefined theme
+   * Make gradual changes
+   * Save custom themes for reuse
+
+---
+
+## 🤝 Contribution
+
+This panel was developed as a desktop alternative to the original web panel. Suggestions and improvements are welcome!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+## 🙏 Acknowledgements
+
+* **YASB Team** - For the excellent YASB project
+* **Python Community** - For the libraries used
+* **Users** - For feedback and suggestions
+
+---
+
+**Developed with ❤️ for the YASB community**
+
+---
+
+---
+
+# 🇧🇷 **Leia em Português (PT-BR)**
+
 # 🎛️ Painel de Controle YASB - Versão Python
+
 
 Uma interface gráfica moderna e intuitiva para configurar o YASB (Yet Another Status Bar) no Windows, desenvolvida em Python com tkinter/ttk.
 
