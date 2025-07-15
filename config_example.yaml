@@ -1,0 +1,99 @@
+bars:
+  yasb-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark: true
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 30
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left: ["clock", "cpu", "memory"]
+      center: ["active_window"]
+      right: ["battery", "volume", "network"]
+
+widgets:
+  clock:
+    type: "yasb.clock.ClockWidget"
+    enabled: true
+    options:
+      label: "{%H:%M:%S}"
+      label_alt: "{%A, %B %d, %Y}"
+      update_interval: 1000
+      timezone: "local"
+
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    enabled: true
+    options:
+      label: "CPU: {cpu_percent}%"
+      update_interval: 2000
+      show_frequency: false
+
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    enabled: true
+    options:
+      label: "RAM: {memory_percent}%"
+      update_interval: 2000
+
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    enabled: true
+    options:
+      label: "{win_title}"
+      max_length: 50
+      show_icon: true
+
+  battery:
+    type: "yasb.battery.BatteryWidget"
+    enabled: true
+    options:
+      label: "🔋 {battery_percent}%"
+      show_charging_status: true
+
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    enabled: true
+    options:
+      label: "🔊 {volume_percent}%"
+      show_mute_status: true
+
+  network:
+    type: "yasb.network.NetworkWidget"
+    enabled: false
+    options:
+      label: "📶 {network_status}"
+      show_speed: true
+
+styles:
+  default:
+    background_color: "#1e1e1e"
+    text_color: "#ffffff"
+    accent_color: "#007acc"
+    border_color: "#333333"
+    font_family: "Arial"
+    font_size: 12
+    font_weight: "normal"
+    padding: 5
+    margin: 2
+
+system:
+  auto_start: true
+  debug_mode: false
+  log_level: "INFO"
+
